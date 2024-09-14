@@ -6,10 +6,11 @@ export const buildConfig = {
     format: 'esm',
     output: {
       name: 'es',
-      path: path.resolve(distRoot, 'es')
+      ext: '.mjs',
+      path: path.resolve(distRoot)
     },
     bundle: {
-      path: '@juming-md/es'
+      path: 'juming-md/es'
     }
   },
   cjs: {
@@ -17,10 +18,11 @@ export const buildConfig = {
     format: 'cjs',
     output: {
       name: 'lib',
-      path: path.resolve(distRoot, 'lib')
+      ext: '.js',
+      path: path.resolve(distRoot)
     },
     bundle: {
-      path: '@juming-md/lib'
+      path: 'juming-md/lib'
     }
   }
 };

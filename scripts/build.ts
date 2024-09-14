@@ -16,7 +16,7 @@ const build = async () => {
   });
 
   const tasks = packages.map(async (pkg) => {
-    const input = path.resolve(packageRoot, pkg, 'index.ts');
+    const input = path.resolve(packageRoot, pkg, 'src/index.ts');
     const inputOptions = {
       input,
       plugins: [nodeResolve(), commonjs(), typescript()]
@@ -26,8 +26,7 @@ const build = async () => {
     const eachPackageTasks = Object.values(buildConfig).map((config) => {
       const outputOptions: OutputOptions = {
         format: config.format as ModuleFormat,
-        file: path.resolve(config.output.path, `${pkg}/index.js`),
-        paths: pathRewriter(config.output.name),
+        file: path.resolve(config.output.path, `${pkg}/dist/index${config.output.ext}`),
         exports: 'named'
       };
       return bundle.write(outputOptions);

@@ -1,0 +1,28 @@
+{
+  "name": "@juming-md/plugin-validate-count",
+  "version": "0.0.5",
+  "description": "ByteMD plugin to support validate count to images and chars",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juming666/juming-md-plugins",
+    "directory": "packages/plugin-validate-count"
+  },
+  "author": "Jhail",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "locales"
+  ],
+  "license": "ISC"
+}

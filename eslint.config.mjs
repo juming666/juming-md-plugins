@@ -33,5 +33,8 @@ export default [
     rules: {
       '@typescript-eslint/no-unused-expressions': 'off'
     }
+  },
+  {
+    ignores: ['dist']
   }
 ];

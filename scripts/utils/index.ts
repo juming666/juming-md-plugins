@@ -1,4 +1,5 @@
 import { spawn } from 'child_process';
+import { projectRoot } from './paths';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type SimpleFunction = (...args: any[]) => any;
@@ -11,7 +12,7 @@ export async function run(commandStr: string) {
   return new Promise<void>((resolve) => {
     const [command, ...args] = commandStr.split(' ');
     const childProcess = spawn(command, args, {
-      cwd: process.cwd(),
+      cwd: projectRoot,
       stdio: 'inherit',
       shell: process.platform === 'win32'
     });
