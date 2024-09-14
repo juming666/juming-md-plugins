@@ -1,5 +1,5 @@
 {
-  "name": "plugin-validate-count",
+  "name": "@juming-md/plugin-validate-count",
   "version": "0.0.5",
   "description": "用于ByteMD编辑器的字符数和图片数量的校验插件",
   "engines": {
@@ -10,6 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
+    "build": "gulp -f build/gulpfile.ts",
     "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "repository": {
@@ -27,13 +28,24 @@
   },
   "homepage": "https://github.com/juming666/plugin-validate-count#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^22.5.4",
     "eslint": "9.9.1",
     "eslint-config-juming": "^1.0.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "fast-glob": "^3.3.2",
+    "gulp": "^5.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
+    "rollup": "^4.21.3",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "sucrase": "^3.35.0",
+    "ts-morph": "^23.0.0",
+    "typescript": "^5.6.2",
     "typescript-eslint": "8.3.0"
   },
   "peerDependencies": {
